@@ -33,17 +33,21 @@ namespace RedditUpvoteScript
             driver.Navigate().GoToUrl("https://old.reddit.com/r/FreeKarma4U/");
 
             //List all posts on page by name
+            //main table
+            IWebElement mainContent = driver.FindElement(By.CssSelector("#siteTable"));
+            Console.WriteLine(mainContent.GetAttribute("inner-html"));
+            Console.ReadLine();
+            //find all p in main
+            //p class="title"
             //enter each post and upvote/comment on everything
+            //for posts on page:
+            //enter post and upvote
             //if cant find pot/if its moved off front give error and move onto next postname in list
 
             //# thing_t3_a7ltch
             //# thing_t3_a7hoya
             //look for element containng thing_t3
-            Console.WriteLine("blah");
             driver.Quit();
-
-
-            //more comments for git commit here
         }
 
     }
